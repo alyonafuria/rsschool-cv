@@ -1,0 +1,224 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=PT+Mono&family=Space+Grotesk:wght@300;600&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    scroll-behavior: smooth; 
+}
+
+em {
+    font-style: italic;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header, .footer {
+    background-color: blue;
+    height: 5vh;
+    padding: 0 20px;
+}
+
+.nav {
+    max-height: 5vh;
+}
+
+.nav-list {
+    max-height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: .3s;
+}
+
+.nav-link a:hover {
+    background-color: white;
+    color: blue;
+}
+
+.nav-link-text {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 5vh;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section.profile-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 50px 0 35px;
+    border-top: none;
+}
+
+.section-title.name-title {
+    font-size: 3em;
+}
+
+.main-name-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.section {
+    border-top: 15px solid;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.text.li-text::before {
+    width: 30px;
+    height: 15px;
+    content: "";
+    position: relative;
+    top: 2px;
+    left: 5px;
+    right: 5px;
+    display: inline-block;
+    background-image: url(../img/bullet.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.text, .nav-link-text {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.pre {
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Mono', monospace;
+    white-space:pre-wrap;
+    font-size: 1.5em;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.text a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.text a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.footer-container {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    max-height: 4vh;
+    background-image: url(../img/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+.header, .footer {
+    height: 10vh;
+}
+
+.nav-list {
+    height: 10vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    padding: 0 10px;
+    line-height: 24px;
+}
+
+.section {
+    width: 100%;
+    border-top: 8px solid;
+   }
+
+.profile-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title.name-title {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.section-title {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.text, .code, .nav-link-text{
+    font-size: 14px;
+}
+
+.footer-container {
+    flex-direction: column;
+    align-items: center;
+    height: 10vh;
+    padding: 3px;
+}
+
+.logo {
+    width: 70px;
+    height: 4vh;
+}
+}
